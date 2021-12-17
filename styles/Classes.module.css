@@ -1,0 +1,93 @@
+.container {
+	--main-brand-color: #e52329;
+}
+
+.navigation {
+	border-top: 0.25em solid var(--main-brand-color);
+	border-bottom: 0.1em solid lightgray;
+	padding-left: 2%;
+	height: 4.25em;
+}
+
+.navContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.mainLogo {
+	align-items: center;
+}
+
+.hamburgerMenu {
+	display: none;
+	font-size: 1.75em;
+}
+
+@media (max-width: 600px) {
+	.navContainer {
+		height: 3.75em;
+	}
+
+	.hamburgerMenu {
+		display: block;
+	}
+
+	.mainLogo {
+		margin: 0.4em auto 0 auto;
+	}
+
+	.sidebar {
+		display: none;
+	}
+}
+
+/* Work area - Sidebar + main screen */
+
+.interface {
+	display: flex;
+}
+
+.sidebar {
+	@apply bg-secondary h-v93 w-80;
+}
+
+.sidebarButton {
+	@apply text-center bg-primary text-white text-xl font-bold mt-8 mx-10 p-4 rounded;
+}
+
+.sidebarButtonIcon {
+	@apply inline text-2xl -mt-1 mr-1;
+}
+
+.workArea {
+	@apply w-full p-12;
+}
+
+@media (max-width: 860px) {
+	.sidebarButton {
+		@apply text-center bg-primary text-white text-base font-bold mt-8 mx-10 p-4 rounded;
+	}
+
+	.sidebarButtonIcon {
+		@apply inline text-base -mt-1 mr-1;
+	}
+}
+
+@media (max-width: 620px) {
+	.navContainer {
+		height: 3.75em;
+	}
+
+	.hamburgerMenu {
+		display: block;
+	}
+
+	.mainLogo {
+		margin: 0.4em auto 0 auto;
+	}
+
+	.sidebar {
+		display: none;
+	}
+}
