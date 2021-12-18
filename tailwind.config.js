@@ -8,6 +8,7 @@ module.exports = {
 			colors: {
 				primary: '#e52329',
 				secondary: '#f6f7f8',
+				primarydark: '#d12025',
 			},
 			height: {
 				v93: '93vh',

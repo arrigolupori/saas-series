@@ -1,11 +1,13 @@
 .container {
 	--main-brand-color: #e52329;
+	--main-brand-color-light: #e5232ad7;
+	--main-brand-color-dark: #d12025;
 }
 
 .navigation {
 	border-top: 0.25em solid var(--main-brand-color);
 	border-bottom: 0.1em solid lightgray;
-	padding-left: 2%;
+	padding-left: 2.25%;
 	height: 4.25em;
 }
 
@@ -49,11 +51,11 @@
 }
 
 .sidebar {
-	@apply bg-secondary h-v93 w-80;
+	@apply bg-secondary h-v93 w-72;
 }
 
 .sidebarButton {
-	@apply text-center bg-primary text-white text-xl font-bold mt-8 mx-10 p-4 rounded;
+	@apply text-center bg-primary text-white text-xl font-bold mt-8 mx-10 p-4 rounded cursor-pointer hover:bg-primarydark;
 }
 
 .sidebarButtonIcon {
@@ -61,20 +63,84 @@
 }
 
 .workArea {
-	@apply w-full p-12;
+	@apply w-full px-12 py-8 max-w-4xl;
+}
+
+.pageIndicator {
+	border: 2px solid lightgray;
+	font-size: 1.5em;
+	width: fit-content;
+	text-align: center;
+	padding: 1em 1.5em;
+	border-radius: 0.25em;
+}
+
+.accountsForm {
+	margin-top: 2em;
+}
+
+.accountsForm > input,
+.accountsForm > button {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.accountsForm > input {
+	width: 80%;
+	padding-left: 2em;
+	border-radius: 0.25em 0 0 0.25em;
+	border: 2px solid lightgrey;
+	border-right: 0;
+}
+
+.accountsForm > button {
+	color: white;
+	font-weight: bold;
+	border-radius: 0 0.25em 0.25em 0;
+	background: var(--main-brand-color);
+	width: 20%;
+	border: 2px solid lightgrey;
+	border-left: 0;
+}
+
+.accountsForm > button:hover {
+	background: var(--main-brand-color-dark);
+}
+
+.accountsTable {
+	margin-top: 2em;
+	border: 2px solid lightgrey;
+}
+
+.accountsTable th {
+	padding: 1em 2em;
+}
+
+.accountsTable td {
+	padding: 1em 2em;
+}
+
+@media (max-width: 1100px) {
+	.sidebarButton {
+		@apply text-base;
+	}
+
+	.sidebarButtonIcon {
+		@apply text-base;
+	}
 }
 
 @media (max-width: 860px) {
 	.sidebarButton {
-		@apply text-center bg-primary text-white text-base font-bold mt-8 mx-10 p-4 rounded;
+		@apply text-sm;
 	}
 
 	.sidebarButtonIcon {
-		@apply inline text-base -mt-1 mr-1;
+		@apply text-sm;
 	}
 }
 
-@media (max-width: 620px) {
+@media (max-width: 700px) {
 	.navContainer {
 		height: 3.75em;
 	}
@@ -89,5 +155,9 @@
 
 	.sidebar {
 		display: none;
+	}
+
+	.workArea {
+		@apply px-8;
 	}
 }
